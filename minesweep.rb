@@ -5,20 +5,20 @@
 class Minesweep < Formula
   desc "Policy-driven secrets and sensitive data scanner with git history forensics"
   homepage "https://github.com/Hxmbl/minesweep"
-  version "2.0.0"
+  version "2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hxmbl/minesweep/releases/download/v2.0.0/minesweep_2.0.0_Darwin_x86_64.tar.gz"
-      sha256 "d84d49ced728e27d5e50c1fc1dcc236e539ccbf26a28c6569702a753c5fae053"
+      url "https://github.com/hxmbl/minesweep/releases/download/v2/minesweep_2_Darwin_x86_64.tar.gz"
+      sha256 "d01b77c5bd0d78e756bc6b8db8fe8e36a5b671c53c19cc67c70891e185c78b23"
 
       define_method(:install) do
         bin.install "minesweep"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hxmbl/minesweep/releases/download/v2.0.0/minesweep_2.0.0_Darwin_arm64.tar.gz"
-      sha256 "fdcf716d2208ae6d73455f4cc9e49c51398ffcb8260dc2c92f826f618012ddf2"
+      url "https://github.com/hxmbl/minesweep/releases/download/v2/minesweep_2_Darwin_arm64.tar.gz"
+      sha256 "9246e0465873df9e7881923b4612d49628bfd2f4dfbcce242753001880108b83"
 
       define_method(:install) do
         bin.install "minesweep"
@@ -28,15 +28,15 @@ class Minesweep < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/minesweep/releases/download/v2.0.0/minesweep_2.0.0_Linux_x86_64.tar.gz"
-      sha256 "b55ca125ed77218bce1610b3fe3c025012692b58ac348efdc393ec44e071ea2b"
+      url "https://github.com/hxmbl/minesweep/releases/download/v2/minesweep_2_Linux_x86_64.tar.gz"
+      sha256 "c97376abc5580ec524ca2cb097e434ce166eb7cbd2d580f57acc44423dddc0f8"
       define_method(:install) do
         bin.install "minesweep"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/minesweep/releases/download/v2.0.0/minesweep_2.0.0_Linux_arm64.tar.gz"
-      sha256 "17a11826e360987c798066d8768cb4acd48641bbc51c6f1faaab3ab0e31fe3f5"
+      url "https://github.com/hxmbl/minesweep/releases/download/v2/minesweep_2_Linux_arm64.tar.gz"
+      sha256 "c25cc75fd15a11f89678750c53e87a82f75aabf9dcdbae954dcd357a9c01bf94"
       define_method(:install) do
         bin.install "minesweep"
       end
