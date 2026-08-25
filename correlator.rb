@@ -8,21 +8,19 @@ class Correlator < Formula
   version "2.1.0"
   license "Unlicense"
 
+  livecheck do
+    url :homepage
+    regex(/^v(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
+  end
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/hxmbl/hx_netkit/releases/download/v2.1.0/correlator-v2.1.0-darwin-arm64.tar.gz"
       sha256 "5025216cf5dcbd61d4b9d6fa79ff4f917f28808cede58b08af64bcabd040ac96"
-
-      def install
-        bin.install "correlator"
-      end
     else
       url "https://github.com/hxmbl/hx_netkit/releases/download/v2.1.0/correlator-v2.1.0-darwin-amd64.tar.gz"
       sha256 "004acab68dbc64c6c73bd2c6f1026fe3a3e393b6aacf19f4c8b71c3b4f3276ca"
-
-      def install
-        bin.install "correlator"
-      end
     end
   end
 
@@ -30,18 +28,14 @@ class Correlator < Formula
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/hxmbl/hx_netkit/releases/download/v2.1.0/correlator-v2.1.0-linux-arm64.tar.gz"
       sha256 "9471ae1b2f65933d3724ca8e02024ed2b3e7d34fd7bdac9cc6114138181292e4"
-
-      def install
-        bin.install "correlator"
-      end
     else
       url "https://github.com/hxmbl/hx_netkit/releases/download/v2.1.0/correlator-v2.1.0-linux-amd64.tar.gz"
       sha256 "30cc6ff390dd4e473c0223cbc0159031e89b3dd3046dc31c1790d19a4323acd5"
-
-      def install
-        bin.install "correlator"
-      end
     end
+  end
+
+  def install
+    bin.install "correlator"
   end
 
   def caveats
