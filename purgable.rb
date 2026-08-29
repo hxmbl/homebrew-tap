@@ -5,21 +5,21 @@
 class Purgable < Formula
   desc "Recursively find files named exactly PURGABLE and ask before deleting them."
   homepage "https://github.com/Hxmbl/purgable"
-  version "1.4"
+  version "1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hxmbl/purgable/releases/download/v1.4/purgable_1.4_Darwin_x86_64.tar.gz"
-      sha256 "9a3bc881063e64a14dbeb1857b17f5b67dd76ff78ccded333cc3ebcacead51c2"
+      url "https://github.com/hxmbl/purgable/releases/download/v1.5/purgable_1.5_Darwin_x86_64.tar.gz"
+      sha256 "f003336105022a71d71d8c9b13b569f0eaae37b9532c288e72afd1ed31056a58"
 
       define_method(:install) do
         bin.install "purgable"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hxmbl/purgable/releases/download/v1.4/purgable_1.4_Darwin_arm64.tar.gz"
-      sha256 "c6edbc0f42f46f26ed4eaef62782d8e64991ef54d1f4500ec0c2256274744274"
+      url "https://github.com/hxmbl/purgable/releases/download/v1.5/purgable_1.5_Darwin_arm64.tar.gz"
+      sha256 "c0fee11899cb2873dfa17534777ed57f2e1c548cbcb4cba9757a36ccf339ae39"
 
       define_method(:install) do
         bin.install "purgable"
@@ -29,15 +29,15 @@ class Purgable < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/purgable/releases/download/v1.4/purgable_1.4_Linux_x86_64.tar.gz"
-      sha256 "101104c81367e22bd507d94848cc26869a1495839deb242c0da58a29a3ffc774"
+      url "https://github.com/hxmbl/purgable/releases/download/v1.5/purgable_1.5_Linux_x86_64.tar.gz"
+      sha256 "800153a8e614c8fcc8bb9426eed08ffe352b05cae7ce01dd5176ff669acf525e"
       define_method(:install) do
         bin.install "purgable"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/purgable/releases/download/v1.4/purgable_1.4_Linux_arm64.tar.gz"
-      sha256 "eb0d3596f0a6efce61f53d0cabccab88be74f7957b2c219655df018d4b9c1faa"
+      url "https://github.com/hxmbl/purgable/releases/download/v1.5/purgable_1.5_Linux_arm64.tar.gz"
+      sha256 "dfba0b0354a7f8112e1bbfffe162aed9be6b55e934c90d1951bfc61cdbee30ba"
       define_method(:install) do
         bin.install "purgable"
       end
