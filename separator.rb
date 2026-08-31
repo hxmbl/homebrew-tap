@@ -5,7 +5,7 @@ class Separator < Formula
   desc "A simple CLI utility that prints a separator line across the terminal width"
   homepage "https://github.com/hxmbl/separator"
   url "https://github.com/hxmbl/separator/archive/refs/tags/v1.0.0.tar.gz"
-  version "1.0.0"
+  version "v1.11.0"
   license "MIT"
 
   def install
