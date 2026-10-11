@@ -5,7 +5,7 @@
 class Correlator < Formula
   desc "Network intelligence — scan, capture, and interrogate your network with local AI"
   homepage "https://github.com/hxmbl/hx_netkit"
-  license "Unlicense"
+  license "MIT"
 
   livecheck do
     url :homepage

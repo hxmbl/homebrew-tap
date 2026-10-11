@@ -5,6 +5,7 @@
 class Minesweep < Formula
   desc "Policy-driven secrets and sensitive data scanner with git history forensics"
   homepage "https://github.com/hxmbl/minesweep"
+  license "MIT"
   version "2.4.0"
 
   on_macos do
