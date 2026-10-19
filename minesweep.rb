@@ -5,21 +5,21 @@
 class Minesweep < Formula
   desc "Policy-driven secrets and sensitive data scanner with git history forensics"
   homepage "https://github.com/hxmbl/minesweep"
+  version "2.4.1"
   license "MIT"
-  version "2.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hxmbl/minesweep/releases/download/v2.4.0/minesweep_2.4.0_Darwin_x86_64.tar.gz"
-      sha256 "d565126ed5ff521dcd6c5e302fab4b9e81dc944dd2456d35b769945a64a94dcd"
+      url "https://github.com/hxmbl/minesweep/releases/download/v2.4.1/minesweep_2.4.1_Darwin_x86_64.tar.gz"
+      sha256 "53b5f86d97a47ac1c8df76dd290227d266ba6e457e8228f37536466bec6a3ec3"
 
       def install
         bin.install "minesweep"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hxmbl/minesweep/releases/download/v2.4.0/minesweep_2.4.0_Darwin_arm64.tar.gz"
-      sha256 "82b2d6ff4b63dc48838650a7e7efc6ca3c66cd2d09fa98dc97f41fa571e4448c"
+      url "https://github.com/hxmbl/minesweep/releases/download/v2.4.1/minesweep_2.4.1_Darwin_arm64.tar.gz"
+      sha256 "4a1cc914cddcdfefd563e554711e59467772c82cc55cf20f1e98a8cca25d92d5"
 
       def install
         bin.install "minesweep"
@@ -30,8 +30,8 @@ class Minesweep < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hxmbl/minesweep/releases/download/v2.4.0/minesweep_2.4.0_Linux_x86_64.tar.gz"
-        sha256 "65f0a2d7f800dff819af1a04c94c72d0419c8b0067d91464497742231e64d859"
+        url "https://github.com/hxmbl/minesweep/releases/download/v2.4.1/minesweep_2.4.1_Linux_x86_64.tar.gz"
+        sha256 "b078c2b12a6439b505354657cc67c783c98034a0b6119927641871771cd33f29"
 
         def install
           bin.install "minesweep"
@@ -40,8 +40,8 @@ class Minesweep < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hxmbl/minesweep/releases/download/v2.4.0/minesweep_2.4.0_Linux_arm64.tar.gz"
-        sha256 "06d62862a9eac7944d47f64fad14fd2c0b5871a6d1be5e8303522f4f6ea1874b"
+        url "https://github.com/hxmbl/minesweep/releases/download/v2.4.1/minesweep_2.4.1_Linux_arm64.tar.gz"
+        sha256 "ca31ff46a669d593e15bcecfde3c39c6eddf836d5bab1d5a38daa10858f86398"
 
         def install
           bin.install "minesweep"
