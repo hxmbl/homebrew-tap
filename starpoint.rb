@@ -5,13 +5,13 @@
 class Starpoint < Formula
   desc "Declarative orchestration over the package managers on your machine."
   homepage "https://github.com/hxmbl/starpoint"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hxmbl/starpoint/releases/download/v0.1.0/starpoint_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "77c177466c859025a807b15b2090f58769177b7124b82df7793522787686e388"
+      url "https://github.com/hxmbl/starpoint/releases/download/v0.2.0/starpoint_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "69fdeb419d90c930ae82ffc73a90d362a17d829b98d7e16b1cc65615da29459e"
 
       define_method(:install) do
         bin.install "starpoint"
@@ -21,8 +21,8 @@ class Starpoint < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hxmbl/starpoint/releases/download/v0.1.0/starpoint_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "ee3a66eeb9af01f76ca74a80ad853ad56930713c3f9c692875fdfb21d414712a"
+      url "https://github.com/hxmbl/starpoint/releases/download/v0.2.0/starpoint_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "0eee488ce35d316c1e656e5045c7791cdd3b809514561bde96cb806547878eb0"
 
       define_method(:install) do
         bin.install "starpoint"
@@ -35,8 +35,8 @@ class Starpoint < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/starpoint/releases/download/v0.1.0/starpoint_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "04a8238f6c77af66f866f7b02ff091ea87f70961eb560e6d0abc7ee296ca9725"
+      url "https://github.com/hxmbl/starpoint/releases/download/v0.2.0/starpoint_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "6afa17c4da0888cc4a33214731ebc40ce0a358123b9cb6f912214c76134f2ae7"
       define_method(:install) do
         bin.install "starpoint"
         bash_completion.install "completions/starpoint.bash" => "starpoint"
@@ -45,8 +45,8 @@ class Starpoint < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/starpoint/releases/download/v0.1.0/starpoint_0.1.0_Linux_arm64.tar.gz"
-      sha256 "fc0312493ddae76b841b6789af4a363b98243f6c92111be7fed8d42f4f6b0c30"
+      url "https://github.com/hxmbl/starpoint/releases/download/v0.2.0/starpoint_0.2.0_Linux_arm64.tar.gz"
+      sha256 "96de4a11abe0f1ccffac6dff53baeb74abb044c0c8263f98ef3968ca0cd2b6db"
       define_method(:install) do
         bin.install "starpoint"
         bash_completion.install "completions/starpoint.bash" => "starpoint"
