@@ -5,29 +5,35 @@
 class Starpoint < Formula
   desc "Declarative orchestration over the package managers on your machine."
   homepage "https://github.com/hxmbl/starpoint"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hxmbl/starpoint/releases/download/v0.2.0/starpoint_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "69fdeb419d90c930ae82ffc73a90d362a17d829b98d7e16b1cc65615da29459e"
+      url "https://github.com/hxmbl/starpoint/releases/download/v0.3.0/starpoint_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "72d382c851dafda9089634e534ed78bdf9b911eb70b9d28f528fd0a67f9161e1"
 
       define_method(:install) do
-        bin.install "starpoint"
-        bash_completion.install "completions/starpoint.bash" => "starpoint"
-        zsh_completion.install "completions/starpoint.zsh"
+        bin.install "str"
+        bin.install_symlink "str" => "starpoint"
+        bash_completion.install "completions/str.bash" => "str"
+        bash_completion.install_symlink bash_completion/"str" => "starpoint"
+        zsh_completion.install "completions/str.zsh" => "_str"
+        fish_completion.install "completions/str.fish"
         fish_completion.install "completions/starpoint.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hxmbl/starpoint/releases/download/v0.2.0/starpoint_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "0eee488ce35d316c1e656e5045c7791cdd3b809514561bde96cb806547878eb0"
+      url "https://github.com/hxmbl/starpoint/releases/download/v0.3.0/starpoint_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "89eb70f5f03ddbd67ec25bd6fcaa11612e78668fe42fdf5b5ffb42b8f4547be6"
 
       define_method(:install) do
-        bin.install "starpoint"
-        bash_completion.install "completions/starpoint.bash" => "starpoint"
-        zsh_completion.install "completions/starpoint.zsh"
+        bin.install "str"
+        bin.install_symlink "str" => "starpoint"
+        bash_completion.install "completions/str.bash" => "str"
+        bash_completion.install_symlink bash_completion/"str" => "starpoint"
+        zsh_completion.install "completions/str.zsh" => "_str"
+        fish_completion.install "completions/str.fish"
         fish_completion.install "completions/starpoint.fish"
       end
     end
@@ -35,28 +41,35 @@ class Starpoint < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/starpoint/releases/download/v0.2.0/starpoint_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "6afa17c4da0888cc4a33214731ebc40ce0a358123b9cb6f912214c76134f2ae7"
+      url "https://github.com/hxmbl/starpoint/releases/download/v0.3.0/starpoint_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "10bced356834d9aa45c905aacf7a2db4a45acf21c2b44280f609c697800c1bba"
       define_method(:install) do
-        bin.install "starpoint"
-        bash_completion.install "completions/starpoint.bash" => "starpoint"
-        zsh_completion.install "completions/starpoint.zsh"
+        bin.install "str"
+        bin.install_symlink "str" => "starpoint"
+        bash_completion.install "completions/str.bash" => "str"
+        bash_completion.install_symlink bash_completion/"str" => "starpoint"
+        zsh_completion.install "completions/str.zsh" => "_str"
+        fish_completion.install "completions/str.fish"
         fish_completion.install "completions/starpoint.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/starpoint/releases/download/v0.2.0/starpoint_0.2.0_Linux_arm64.tar.gz"
-      sha256 "96de4a11abe0f1ccffac6dff53baeb74abb044c0c8263f98ef3968ca0cd2b6db"
+      url "https://github.com/hxmbl/starpoint/releases/download/v0.3.0/starpoint_0.3.0_Linux_arm64.tar.gz"
+      sha256 "0c231d7ceb5bfa419f25de05fd17f927f6f38d3755d6f10574186017a816a301"
       define_method(:install) do
-        bin.install "starpoint"
-        bash_completion.install "completions/starpoint.bash" => "starpoint"
-        zsh_completion.install "completions/starpoint.zsh"
+        bin.install "str"
+        bin.install_symlink "str" => "starpoint"
+        bash_completion.install "completions/str.bash" => "str"
+        bash_completion.install_symlink bash_completion/"str" => "starpoint"
+        zsh_completion.install "completions/str.zsh" => "_str"
+        fish_completion.install "completions/str.fish"
         fish_completion.install "completions/starpoint.fish"
       end
     end
   end
 
   test do
+    system "#{bin}/str", "--version"
     system "#{bin}/starpoint", "--version"
   end
 end
