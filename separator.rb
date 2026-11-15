@@ -1,17 +1,17 @@
 class Separator < Formula
   desc "A simple CLI utility that prints a separator line across the terminal width"
   homepage "https://github.com/hxmbl/separator"
-  version "1.16.0"
+  version "1.2"
   license "MIT"
 
   on_arm do
-    url "https://github.com/hxmbl/separator/releases/download/v1.16.0/separator-macos-arm64.tar.gz"
-    sha256 "3b7ec406cbb890463970828e6ab2661ffe448341c707f2c4c07871d1fb14e0fe"
+    url "https://github.com/hxmbl/separator/releases/download/v1.2/separator-macos-arm64.tar.gz"
+    sha256 "7bd9d243b2235aab2e3e81f0f3698c518b2a16070dadff6d268d86161763a2f8"
   end
 
   on_intel do
-    url "https://github.com/hxmbl/separator/releases/download/v1.16.0/separator-macos-amd64.tar.gz"
-    sha256 "b35bcae4055ba2d23ea01a1d988c3689f48b19c96927549537efd073771376b8"
+    url "https://github.com/hxmbl/separator/releases/download/v1.2/separator-macos-amd64.tar.gz"
+    sha256 "9b6f9be09db3a7f07bff132f26dac6205154a6bed7e1a8690746af4859e713eb"
   end
 
   def install
